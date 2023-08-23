@@ -1,0 +1,16 @@
+<div class="contact-view">
+  <div class="container">
+    <mat-card>
+      <h1>{{ contact.name }}</h1>
+      <p>Phone number: {{ contact.phoneNumber }}</p>
+      <p *ngIf="contact.email">Email: {{ contact.email }}</p>
+      <p *ngIf="contact.organization">Organization: {{ contact.organization }}</p>
+      <div class="options">
+        <button mat-raised-button color="primary" [routerLink]="['../../edit/' + contact.id]">
+          <mat-icon>edit</mat-icon>
+          Edit
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>

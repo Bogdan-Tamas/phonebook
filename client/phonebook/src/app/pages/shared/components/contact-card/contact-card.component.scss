@@ -1,0 +1,36 @@
+.card-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  align-items: flex-start;
+
+  .card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.15s;
+    cursor: pointer;
+  
+    .details{
+      display: flex;
+      width: 100%;
+      gap: 10px;
+  
+      p, .blank{
+        flex: 1;
+        margin: 0;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.options{
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}

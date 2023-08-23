@@ -1,0 +1,28 @@
+<div class="search-container">
+  <div class="container">
+    <mat-card>
+      <div class="type-selector">
+        <mat-button-toggle-group [(ngModel)]="searchType">
+          <mat-button-toggle value="Name" checked>Name</mat-button-toggle>
+          <mat-button-toggle value="PhoneNumber">Phone number</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <div class="search">
+        <mat-form-field appearance="outline">
+          <mat-label>Search</mat-label>
+          <input matInput type="search" [(ngModel)]="searchValue">
+        </mat-form-field>
+      </div>
+      <button mat-button color="primary" (click)="search()">Search</button>
+    </mat-card>
+    <ng-container *ngIf="result">
+      <h2>Result:</h2>
+      <div class="success" *ngIf="result.success">
+        <ng-container *ngIf="searchResult">
+          <contact-card [contact]="searchResult"></contact-card>
+        </ng-container>
+      </div>
+      <div class="error" *ngIf="result.error">{{ result.error }}</div>
+    </ng-container>
+  </div>
+</div>

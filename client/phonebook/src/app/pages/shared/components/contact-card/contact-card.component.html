@@ -1,0 +1,23 @@
+<mat-card (click)="toggleEdit()">
+  <div class="card-container">
+    <div class="card">
+      <div class="details">
+        <p class="name">{{ contact.name }}</p>
+        <p class="phone-number">{{ contact.phoneNumber }}</p>
+        <p class="email" *ngIf="contact.email; else spacer">{{ contact.email }}</p>
+        <p class="organization" *ngIf="contact.organization; else spacer">{{ contact.organization }}</p>
+        <ng-template #spacer><div class="blank"></div></ng-template>
+      </div>
+    </div>
+  </div>
+</mat-card>
+<div class="options" *ngIf="editActive" @slideDown>
+  <button mat-raised-button color="primary" [routerLink]="['/contact/view/' + contact.id]">
+    <mat-icon>visibility</mat-icon>
+    View
+  </button>
+  <button mat-raised-button color="primary" [routerLink]="['/contact/edit/' + contact.id]">
+    <mat-icon>edit</mat-icon>
+    Edit
+  </button>
+</div>

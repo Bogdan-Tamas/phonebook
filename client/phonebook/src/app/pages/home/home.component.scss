@@ -1,0 +1,33 @@
+@import '/src/styles.scss';
+
+.page{
+  height: 100%;
+  background: #ececec;
+  padding: 20px 12px;
+}
+
+.search{
+  margin-bottom: 20px;
+
+  .search-by{
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.container{
+  max-width: $contentWidth;
+  margin: auto;
+
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .spinner{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}

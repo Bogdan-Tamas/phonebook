@@ -1,0 +1,20 @@
+.nav-items{
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  .nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a{
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}
