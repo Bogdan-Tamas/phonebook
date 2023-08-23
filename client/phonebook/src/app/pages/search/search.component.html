@@ -13,7 +13,7 @@
           <input matInput type="search" [(ngModel)]="searchValue">
         </mat-form-field>
       </div>
-      <button mat-button color="primary" (click)="search()">Search</button>
+      <button mat-raised-button color="primary" (click)="search()">Search</button>
     </mat-card>
     <ng-container *ngIf="result">
       <h2>Result:</h2>

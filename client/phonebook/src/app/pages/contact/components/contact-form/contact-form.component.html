@@ -21,16 +21,14 @@
     <input type="text" matInput formControlName="email">
   </mat-form-field>
 
-  <div [ngClass]="{'next-button': true, 'disabled': !contactForm.valid}">
-    <button mat-button>
-      <ng-container *ngIf="preselectedContact; else addText">
-        Edit
-      </ng-container>
-      <ng-template #addText>
-        Add
-      </ng-template>
-    </button>
-  </div>
+  <button mat-raised-button color="primary" [disabled]="!contactForm.valid">
+    <ng-container *ngIf="preselectedContact; else addText">
+      Edit
+    </ng-container>
+    <ng-template #addText>
+      Add
+    </ng-template>
+  </button>
 </form>
 <div class="result" *ngIf="result">
   <div class="success" *ngIf="result.success">Success!</div>
